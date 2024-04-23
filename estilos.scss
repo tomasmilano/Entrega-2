@@ -1,256 +1,317 @@
-*{
+$color-fondo: rgba(0, 0, 0, 0.6);
+$color-primario: aliceblue;
+$color-secundario: #c32be2;
+
+@mixin transition($property, $duration) {
+    transition: $property $duration ease-in-out !important;
+}
+
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-item($flex, $width, $height) {
+    flex: $flex 1 auto;
+    width: $width;
+    height: $height;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
     margin: 0;
 }
 
-.fondo{
+.fondo {
     background-image: url(Multimedia/carbon.jpg);
     box-sizing: border-box;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 .navbar-nav .nav-link {
     color: #fff; /* Color de la fuente por defecto */
 }
 
 .navbar-nav .nav-link:hover {
-    color:#c32be2 !important; /* Color de la fuente al pasar el mouse */
+    color: $color-secundario !important; /* Color de la fuente al pasar el mouse */
 }
+
+.nav-link {
+    @include transition(transform, 0.3s);
+}
+
+.nav-link:hover {
+    transform: scale(1.1) !important; /* Escala el elemento al 110% cuando el mouse está sobre él */
+}
+
 footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 50px; /* Altura del footer */
+    height: 30px; /* Altura del footer */
 }
-/*carta de contacto*/
-.card{
+
+/* carta de contacto */
+.card {
     margin-top: 150px;
     margin-bottom: 100px;
-    background-color:  rgba(0, 0, 0, 0.6);
-    color: aliceblue;
+    background-color: $color-fondo;
+    color: $color-primario;
 }
-/* estilo para contenedores*/
-.intro{
-    background-color: rgba(0, 0, 0, 0.6);
-    color: aliceblue;
+
+/* estilo para contenedores */
+.intro {
+    background-color: $color-fondo;
+    color: $color-primario;
 }
-.intro h2{
+
+.intro h2 {
     text-align: center;
+    color: $color-secundario;
+    text-shadow: #000 10px;
+    font-size: 50px;
 }
-.intro p{
+
+.intro p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
     text-align: center;
 }
-.ubicacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.contenedor {
+    @include flexbox-center;
+    height: 100vh;
 }
-iframe{
+
+.intro {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ubicacion {
+    @include flexbox-center;
+}
+
+iframe {
     width: 100%;
-    height: 6 fr;
+    height: 6fr;
 }
-/*flebox (pagina nosotros)*/
-.flexbox{
+
+/* flexbox (pagina nosotros) */
+.flexbox {
     margin-top: 85px;
-    display: flex;
+    @include flexbox-center;
     flex-wrap: wrap;
     flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
-    color: #c32be2;
- 
-
+    color: $color-secundario;
 }
 
-.flex-item h2{text-align: center;
-    background-color: rgba(0, 0, 0, 0.5)}
-.flex-item p{
+.col {
+    background-color: rgb(32, 32, 32);
+    border-radius: 2px;
+    @include flex-item(1, 30%, auto);
+}
+
+.flex-item h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.flex-item p {
     padding: 20px;
     color: rgb(250, 247, 244);
     font-size: 20px;
 }
-.flex-item :last-child{
-    background-color: rgba(0, 0, 0, 0.6);
-}
-.flex-item :last-child{
-   
-    flex:1 1 auto;
-    width: 100%;
-    height: auto;
 
+.flex-item :last-child {
+    background-color: rgba(0, 0, 0, 0.6);
+    @include flex-item(1, 100%, auto);
 }
-/* grids (pagina productos)*/
-.galeria{
+
+/* grids (pagina productos) */
+.galeria {
     display: grid;
     margin-top: 80px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 180px);
     grid-template-areas: 
-    "img1 img2 img3 img4"
-    "img5 img6 img7 img8"
-    "img9 img10 img11 img12";
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8"
+        "img9 img10 img11 img12";
     grid-gap: 15px;
     padding: 20px;
-  
 }
 
-
-.item{
+.item {
     border: 3px solid #000;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     filter: grayscale(100%);
-    transition: all 0.9s;
+    @include transition(all, 0.9s);
+    margin: 10px;
 }
-.item:hover{
+
+.item:hover {
     filter: grayscale(0%);
     transform: scale(0.9);
 }
-.item1{
+
+.item1 {
     background-image: url(Multimedia/DSC_0212.webp);
     grid-area: img1;
 }
 
-.item2{
+.item2 {
     background-image: url(Multimedia/111985_alu-spacegray-sp.jpg);
     grid-area: img2;
 }
 
-.item3{
+.item3 {
     background-image: url(Multimedia/magsafe2.jpg);
     grid-area: img3;
 }
 
-.item4{
+.item4 {
     background-image: url(Multimedia/magsafe-foto11-4932b57546bd159e1c16853920387720-640-0.jpg);
     grid-area: img4;
 }
 
-.item5{
+.item5 {
     background-image: url(Multimedia/airpods-pro-2022.webp);
     grid-area: img5;
 }
 
-.item6{
+.item6 {
     background-image: url(Multimedia/iphone13_0017_rosa-areia-f83422c62f371cf36616468490858555-640-01-cfcd9defdb1a9ae28b16551321596188-1024-1024.jpg);
     grid-area: img6;
 }
 
-.item7{
+.item7 {
     background-image: url(Multimedia/Apple-WWDC23-Vision-Pro-glass-230605_big.jpg.large.jpg);
     grid-area: img7;
 }
 
-.item8{
+.item8 {
     background-image: url(Multimedia/635a8e4a2a59e__822x460.webp);
     grid-area: img8;
 }
 
-/* carrusel (index.html)*/
-#carouselExampleIndicators{
+/* carrusel (index.html) */
+#carouselExampleIndicators {
     max-height: 400px;
 }
-.carousel{
+
+.carousel {
     margin: auto;
-    max-width:600px;
+    max-width: 600px;
     max-height: 600px;
     overflow: hidden;
 }
-.navbar-brand{
-   color: #c32be2 !important;
-   font-size: 40px;
-   
-}
-.carousel-item{
-    max-height: 600px;
-}
-.titulo-descuentos{
-    background-color: #c32be2;
-  text-align: center;
-  height: 50px;
-  margin-top: 85px;
-   text-shadow: 2px 2px 2px #0b0a0a;
-  animation-duration: 2s;
-  animation-name: aparecer;
-  animation-delay: 5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  
-}
-@keyframes aparecer {
-    0%{
-        opacity: 0; 
-     }
- 
-    100%{
-        opacity: 1;
-     }
- }
- 
-.nav-link{
-    font-size: 25px;
-}
-.navbar-brand:hover{
-    text-decoration: #c32be2 ;
-}
-.text-custom1{
-    color: rgb(106, 177, 248);
-}
-.text-custom2{
-    color: rgb(59, 160, 0);
-}
-.text-custom3{
-    color:#e22b90
+
+.navbar-brand {
+    color: $color-secundario !important;
+    font-size: 40px;
 }
 
-/* inicio Media Querys */
-@media only screen and ( max-width:720px){
-    .galeria{
+.carousel-item {
+    max-height: 600px;
+}
+
+.titulo-descuentos {
+    background-color: $color-secundario;
+    text-align: center;
+    height: 50px;
+    margin-top: 85px;
+    text-shadow: 2px 2px 2px #0b0a0a;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-delay: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0; 
+     }
+
+    100% {
+        opacity: 1;
+     }
+}
+
+.nav-link {
+    font-size: 25px;
+}
+
+.navbar-brand:hover {
+    text-decoration: $color-secundario;
+}
+
+.text-custom1 {
+    color: rgb(106, 177, 248);
+}
+
+.text-custom2 {
+    color: rgb(59, 160, 0);
+}
+
+.text-custom3 {
+    color: #e22b90;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 720px) {
+    .galeria {
         margin: auto;
         display: grid;
         margin-top: 80px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(9, 180px);
         grid-template-areas:
-        "img1 img2"
-        "img3 img4"
-        "img5 img6"
-        "img7 img8";
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8";
         grid-gap: 15px;
         padding: 20px;
-      
+    }
+
+    .intro {
+        max-width: 100%;
     }
 }
-@media only screen and (max-width:480px){
-    .galeria{
+
+@media only screen and (max-width: 480px) {
+    .galeria {
         display: grid;
         margin-top: 80px;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(9, 180px);
         grid-template-areas:
-        "img1"
-        "img2"
-        "img3"
-        "img4"
-        "img5"
-        "img6"
-        "img7"
-        "img8"
-        "img9";
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6"
+            "img7"
+            "img8"
+            "img9";
         grid-gap: 15px;
         padding: 20px;
-      
     }
 }

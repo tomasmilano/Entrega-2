@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -25,14 +26,22 @@ html, body {
   color: #c32be2 !important; /* Color de la fuente al pasar el mouse */
 }
 
+.nav-link {
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.nav-link:hover {
+  transform: scale(1.1) !important; /* Escala el elemento al 110% cuando el mouse está sobre él */
+}
+
 footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 50px; /* Altura del footer */
+  height: 30px; /* Altura del footer */
 }
 
-/*carta de contacto*/
+/* carta de contacto */
 .card {
   margin-top: 150px;
   margin-bottom: 100px;
@@ -40,7 +49,7 @@ footer {
   color: aliceblue;
 }
 
-/* estilo para contenedores*/
+/* estilo para contenedores */
 .intro {
   background-color: rgba(0, 0, 0, 0.6);
   color: aliceblue;
@@ -48,12 +57,27 @@ footer {
 
 .intro h2 {
   text-align: center;
+  color: #c32be2;
+  text-shadow: #000 10px;
+  font-size: 50px;
 }
 
 .intro p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
   text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intro {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .ubicacion {
@@ -64,20 +88,28 @@ footer {
 
 iframe {
   width: 100%;
-  height: 6 fr;
+  height: 6fr;
 }
 
-/*flebox (pagina nosotros)*/
+/* flexbox (pagina nosotros) */
 .flexbox {
   margin-top: 85px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   color: #c32be2;
+}
+
+.col {
+  background-color: rgb(32, 32, 32);
+  border-radius: 2px;
+  flex: 1 1 auto;
+  width: 30%;
+  height: auto;
 }
 
 .flex-item h2 {
@@ -93,15 +125,12 @@ iframe {
 
 .flex-item :last-child {
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.flex-item :last-child {
   flex: 1 1 auto;
   width: 100%;
   height: auto;
 }
 
-/* grids (pagina productos)*/
+/* grids (pagina productos) */
 .galeria {
   display: grid;
   margin-top: 80px;
@@ -118,7 +147,8 @@ iframe {
   background-position: center;
   border-radius: 10px;
   filter: grayscale(100%);
-  transition: all 0.9s;
+  transition: all 0.9s ease-in-out !important;
+  margin: 10px;
 }
 
 .item:hover {
@@ -166,7 +196,7 @@ iframe {
   grid-area: img8;
 }
 
-/* carrusel (index.html)*/
+/* carrusel (index.html) */
 #carouselExampleIndicators {
   max-height: 400px;
 }
@@ -228,7 +258,7 @@ iframe {
   color: #e22b90;
 }
 
-/* inicio Media Querys */
+/* Media Queries */
 @media only screen and (max-width: 720px) {
   .galeria {
     margin: auto;
@@ -239,6 +269,9 @@ iframe {
     grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8";
     grid-gap: 15px;
     padding: 20px;
+  }
+  .intro {
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
