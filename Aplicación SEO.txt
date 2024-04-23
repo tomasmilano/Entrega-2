@@ -1,0 +1,4 @@
+SEO Entrega 3 Desarrollo Web
+Se agregaron 2 etiquetas meta en cada Página, un refiere al Description y la otra a las KeyWords,
+las 2 etiquetas se encuentran ubicadas siemore , debajo de la primera etiqueta meta(viewport) 
+para que sea facil hallarlas.
