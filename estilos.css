@@ -11,7 +11,7 @@ html, body {
 }
 
 .fondo {
-  background-image: url(Multimedia/carbon.jpg);
+  background-image: url(./assets/carbon.jpg);
   box-sizing: border-box;
   min-height: 100vh;
   display: flex;
@@ -45,14 +45,15 @@ footer {
 .card {
   margin-top: 150px;
   margin-bottom: 100px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.808);
   color: aliceblue;
 }
 
 /* estilo para contenedores */
 .intro {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.808);
   color: aliceblue;
+  border-radius: 20px;
 }
 
 .intro h2 {
@@ -101,26 +102,21 @@ iframe {
   flex-flow: row wrap;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
+  border-radius: 20px;
   color: #c32be2;
-}
-
-.col {
-  background-color: rgb(32, 32, 32);
-  border-radius: 2px;
-  flex: 1 1 auto;
-  width: 30%;
-  height: auto;
 }
 
 .flex-item h2 {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 .flex-item p {
   padding: 20px;
   color: rgb(250, 247, 244);
   font-size: 20px;
+  border-radius: 20px;
 }
 
 .flex-item :last-child {
@@ -128,6 +124,10 @@ iframe {
   flex: 1 1 auto;
   width: 100%;
   height: auto;
+}
+
+.imagen {
+  max-width: 70%;
 }
 
 /* grids (pagina productos) */
@@ -157,42 +157,42 @@ iframe {
 }
 
 .item1 {
-  background-image: url(Multimedia/DSC_0212.webp);
+  background-image: url(./assets/DSC_0212.webp);
   grid-area: img1;
 }
 
 .item2 {
-  background-image: url(Multimedia/111985_alu-spacegray-sp.jpg);
+  background-image: url(./assets/111985_alu-spacegray-sp.jpg);
   grid-area: img2;
 }
 
 .item3 {
-  background-image: url(Multimedia/magsafe2.jpg);
+  background-image: url(./assets/magsafe2.jpg);
   grid-area: img3;
 }
 
 .item4 {
-  background-image: url(Multimedia/magsafe-foto11-4932b57546bd159e1c16853920387720-640-0.jpg);
+  background-image: url(./assets/magsafe-foto11-4932b57546bd159e1c16853920387720-640-0.jpg);
   grid-area: img4;
 }
 
 .item5 {
-  background-image: url(Multimedia/airpods-pro-2022.webp);
+  background-image: url(./assets/airpods-pro-2022.webp);
   grid-area: img5;
 }
 
 .item6 {
-  background-image: url(Multimedia/iphone13_0017_rosa-areia-f83422c62f371cf36616468490858555-640-01-cfcd9defdb1a9ae28b16551321596188-1024-1024.jpg);
+  background-image: url(./assets/iphone13_0017_rosa-areia-f83422c62f371cf36616468490858555-640-01-cfcd9defdb1a9ae28b16551321596188-1024-1024.jpg);
   grid-area: img6;
 }
 
 .item7 {
-  background-image: url(Multimedia/Apple-WWDC23-Vision-Pro-glass-230605_big.jpg.large.jpg);
+  background-image: url(./assets/Apple-WWDC23-Vision-Pro-glass-230605_big.jpg.large.jpg);
   grid-area: img7;
 }
 
 .item8 {
-  background-image: url(Multimedia/635a8e4a2a59e__822x460.webp);
+  background-image: url(./assets/635a8e4a2a59e__822x460.webp);
   grid-area: img8;
 }
 
