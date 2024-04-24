@@ -1,6 +1,7 @@
 $color-fondo: rgba(0, 0, 0, 0.808);
 $color-primario: aliceblue;
 $color-secundario: #c32be2;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @mixin transition($property, $duration) {
     transition: $property $duration ease-in-out !important;
@@ -30,17 +31,15 @@ html, body {
 }
 
 .fondo {
-    background-image: url(./assets/carbon.jpg); // Cambio de la carpeta Multimedia a assets
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.03)), url(./assets/carbon.jpg);
     box-sizing: border-box;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-.navbar {
-    background: linear-gradient(to right, #000000, #333333) !important;
-}  
+  }
 .navbar-nav .nav-link {
-    color: #fff; /* Color de la fuente por defecto */
+    color: #fff; 
+    font-size: 21px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -72,9 +71,8 @@ footer {
 
 /* estilo para contenedores */
 .intro {
-    background-color: $color-fondo;
-    color: $color-primario;
-    border-radius: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)); 
+    color: $color-primario; 
 }
 
 .intro h2 {
@@ -85,7 +83,7 @@ footer {
 }
 
 .intro p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 22px;
     text-align: center;
 }
@@ -96,8 +94,9 @@ footer {
 }
 
 .intro {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+
 }
 
 .ubicacion {
