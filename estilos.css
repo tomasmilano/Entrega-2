@@ -19,6 +19,10 @@ html, body {
   flex-direction: column;
 }
 
+.navbar {
+  background-color: black !important;
+}
+
 .navbar-nav .nav-link {
   color: #fff;
   font-size: 21px;
@@ -137,7 +141,7 @@ iframe {
 /* grids (pagina productos) */
 .galeria {
   display: grid;
-  margin-top: 80px;
+  margin-top: 30px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 180px);
   grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8" "img9 img10 img11 img12";
@@ -260,6 +264,23 @@ iframe {
 
 .text-custom3 {
   color: #e22b90;
+}
+
+/* Footer */
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #c32be2 !important;
+}
+
+footer {
+  background-color: grey !important;
+}
+
+.footer {
+  background-color: #c32be2;
 }
 
 /* Media Queries */
