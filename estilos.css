@@ -156,7 +156,7 @@ iframe {
   border-radius: 10px;
   filter: grayscale(100%);
   transition: all 0.9s ease-in-out !important;
-  margin: 10px;
+  margin: 0;
 }
 
 .item:hover {
@@ -267,6 +267,10 @@ iframe {
 }
 
 /* Footer */
+footer h5 {
+  color: #c32be2 !important;
+}
+
 footer a {
   text-decoration: none;
 }
@@ -276,11 +280,7 @@ footer a:hover {
 }
 
 footer {
-  background-color: grey !important;
-}
-
-.footer {
-  background-color: #c32be2;
+  background-color: rgb(147, 50, 50) !important;
 }
 
 /* Media Queries */
