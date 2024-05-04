@@ -279,10 +279,6 @@ footer a:hover {
   color: #c32be2 !important;
 }
 
-footer {
-  background-color: rgb(147, 50, 50) !important;
-}
-
 /* Media Queries */
 @media only screen and (max-width: 720px) {
   .galeria {
