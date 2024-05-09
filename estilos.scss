@@ -75,6 +75,7 @@ footer {
 .intro {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)); 
     color: $color-primario; 
+    font-family: "Montserrat";
 }
 
 .intro h2 {
@@ -106,7 +107,7 @@ footer {
 }
 
 iframe {
-    width: 100%;
+    width: 80%;
     height: 6fr;
 }
 
@@ -281,7 +282,18 @@ iframe {
     color: #e22b90;
 }
 /* Footer */
+footer p{
+    font-family: "Montserrat", sans-serif;
+}
+.texto-nosotros{
+    width: 70%;
+ }
 footer h5{
+
+    text-align: center;
+    color: #c32be2 !important;
+}
+.copyright{
     color: #c32be2 !important;
 }
 footer a{
@@ -290,7 +302,10 @@ footer a{
 footer a:hover {
     color: #c32be2 !important;
 }
-
+.list-inline-item{
+    padding: 20px;
+    font-size: 25px;
+}
 
 /* Media Queries */
 
@@ -312,6 +327,13 @@ footer a:hover {
 
     .intro {
         max-width: 100%;
+    }
+    .texto-nosotros{
+        width: 100%;
+    }
+    iframe
+    {
+        width: 100%;
     }
 }
 
