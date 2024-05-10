@@ -1,6 +1,9 @@
 $color-fondo: rgba(0, 0, 0, 0.808);
 $color-primario: aliceblue;
 $color-secundario: #c32be2;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @mixin transition($property, $duration) {
@@ -240,16 +243,19 @@ iframe {
 }
 
 .titulo-descuentos {
+    font-family: "Russo One", sans-serif;
     background-color: $color-secundario;
     text-align: center;
     height: 50px;
     margin-top: 85px;
-    text-shadow: 2px 2px 2px #0b0a0a;
     animation-duration: 2s;
     animation-name: aparecer;
     animation-delay: 5s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+.titulo-descuentos h2{
+    color: #000;
 }
 
 @keyframes aparecer {
